@@ -1,0 +1,11 @@
+{
+    "name": "wooden_platform",
+    "version": "0.1.0",
+    "title": "Wooden Platform",
+    "author": "Talandar",
+    "dependencies": [
+        "base >= 2.0"
+    ],
+    "description": "Lets you place selected lightweight machines and infrastructure on water, enabling controlled factory expansion across lakes, rivers, and oceans.",
+    "factorio_version": "2.0"
+}
