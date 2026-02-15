@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2026-02-15
+  Changes:
+    - added german locale made by Schlumpf
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2026-01-31
+  Bugfixes:
+    - all things that are based on ammo turret prototype are now placeable on wooden platform
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-01-31
+  Bugfixes:
+    - all things that are based on pipe prototype are now placeable on wooden platform
+    - all things that are based on radar prototype are now placeable on wooden platform
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2026-01-31
   Changes:

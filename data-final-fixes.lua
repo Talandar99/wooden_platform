@@ -85,14 +85,15 @@ local function apply_platform_mask(proto_type, prototype)
 		or (proto_type == "locomotive")
 		or (proto_type == "fluid-wagon")
 		or (proto_type == "cargo-wagon")
-		or prototype.name == "gun-turret"
-		or prototype.name == "heavy-gun-turret"
-		or prototype.name == "flamethrower-turret"
-		or prototype.name == "rocket-turret"
-		or prototype.name == "pipe"
-		or prototype.name == "steel-chest"
+		or (proto_type == "radar")
+		or (proto_type == "pipe")
+		or (proto_type == "ammo-turret")
+		or (proto_type == "fluid-turret")
+		--or prototype.name == "gun-turret"
+		--or prototype.name == "heavy-gun-turret"
+		--or prototype.name == "flamethrower-turret"
+		--or prototype.name == "rocket-turret"
 		or prototype.name == "barreling-machine"
-		or prototype.name == "radar"
 		or prototype.name == "canex-excavator"
 		or prototype.name == "entity-ghost"
 		or prototype.name == "pump"
@@ -103,7 +104,6 @@ local function apply_platform_mask(proto_type, prototype)
 		or prototype.name == "or_radar"
 		or prototype.name == "or_tank"
 		or prototype.name == "kr-steel-pump"
-		or prototype.name == "kr-steel-pipe"
 
 	if not whitelisted_basic and not place_result_entities[prototype.name] then
 		return
