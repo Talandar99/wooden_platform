@@ -104,6 +104,8 @@ local function apply_platform_mask(proto_type, prototype)
 		or prototype.name == "or_radar"
 		or prototype.name == "or_tank"
 		or prototype.name == "kr-steel-pump"
+		or prototype.name == "barreling-machine"
+		or prototype.fast_replaceable_group == "barreling-machine"
 
 	if not whitelisted_basic and not place_result_entities[prototype.name] then
 		return

@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2026-03-14
+  Changes:
+    - wooden platform is now unlocked with steel axe research and cost 50 wood
+    - if pelagos is installed special recipe is unlocked with coconut processing technology
+      research. Pelagos wooden platform recipe is cheaper then regular recipe: 
+      (15 wood, 5 sealant, 10 coconut husks)
+    - tips and tricks for wooden platform should now be present even without Pelagos installed
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2026-03-12
+  Changes:
+    - all barreling machines with "barreling-machine" fast replaceable group 
+      can now be placed on wooden platform
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2026-02-15
   Changes:
