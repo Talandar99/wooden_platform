@@ -156,6 +156,45 @@ for proto_type, set in pairs(data.raw) do
 	end
 end
 
+local function add_layer(proto)
+	if not proto then
+		return
+	end
+
+	if not proto.collision_mask then
+		proto.collision_mask = { layers = {} }
+	elseif not proto.collision_mask.layers then
+		proto.collision_mask = { layers = proto.collision_mask }
+	end
+
+	proto.collision_mask.layers["wooden-platform"] = true
+end
+
+add_layer(data.raw["curved-rail-a"]["dummy-curved-rail-a"])
+add_layer(data.raw["curved-rail-b"]["dummy-curved-rail-b"])
+add_layer(data.raw["half-diagonal-rail"]["dummy-half-diagonal-rail"])
+
+add_layer(data.raw["elevated-curved-rail-a"]["dummy-elevated-curved-rail-a"])
+add_layer(data.raw["elevated-curved-rail-b"]["dummy-elevated-curved-rail-b"])
+add_layer(data.raw["elevated-half-diagonal-rail"]["dummy-elevated-half-diagonal-rail"])
+add_layer(data.raw["elevated-straight-rail"]["dummy-elevated-straight-rail"])
+
+add_layer(data.raw["rail-ramp"]["dummy-rail-ramp"])
+add_layer(data.raw["rail-support"]["dummy-rail-support"])
+
+add_layer(data.raw["legacy-straight-rail"]["legacy-straight-rail"])
+add_layer(data.raw["legacy-curved-rail"]["legacy-curved-rail"])
+
+add_layer(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"])
+add_layer(data.raw["half-diagonal-rail"]["half-diagonal-rail"])
+add_layer(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"])
+add_layer(data.raw["elevated-straight-rail"]["elevated-straight-rail"])
+add_layer(data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"])
+add_layer(data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"])
+
+add_layer(data.raw["curved-rail-a"]["curved-rail-a"])
+add_layer(data.raw["curved-rail-b"]["curved-rail-b"])
+
 --log("wooden-platform DEBUG: listing place_result entities")
 --
 --local count = 0
