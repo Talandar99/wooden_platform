@@ -16,6 +16,7 @@ if t then
 		t.collision_mask = { layers = t.collision_mask }
 	end
 	t.collision_mask.layers["wooden-platform"] = true
+	--t.collision_mask.layers["rail"] = true
 end
 
 local MASK = "wooden-platform"
@@ -170,38 +171,10 @@ local function add_layer(proto)
 	proto.collision_mask.layers["wooden-platform"] = true
 end
 
-add_layer(data.raw["curved-rail-a"]["dummy-curved-rail-a"])
-add_layer(data.raw["curved-rail-b"]["dummy-curved-rail-b"])
-add_layer(data.raw["half-diagonal-rail"]["dummy-half-diagonal-rail"])
-
-add_layer(data.raw["elevated-curved-rail-a"]["dummy-elevated-curved-rail-a"])
-add_layer(data.raw["elevated-curved-rail-b"]["dummy-elevated-curved-rail-b"])
-add_layer(data.raw["elevated-half-diagonal-rail"]["dummy-elevated-half-diagonal-rail"])
-add_layer(data.raw["elevated-straight-rail"]["dummy-elevated-straight-rail"])
-
-add_layer(data.raw["rail-ramp"]["dummy-rail-ramp"])
-add_layer(data.raw["rail-support"]["dummy-rail-support"])
-
-add_layer(data.raw["legacy-straight-rail"]["legacy-straight-rail"])
-add_layer(data.raw["legacy-curved-rail"]["legacy-curved-rail"])
-
-add_layer(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"])
-add_layer(data.raw["half-diagonal-rail"]["half-diagonal-rail"])
-add_layer(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"])
-add_layer(data.raw["elevated-straight-rail"]["elevated-straight-rail"])
-add_layer(data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"])
-add_layer(data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"])
-
-add_layer(data.raw["curved-rail-a"]["curved-rail-a"])
-add_layer(data.raw["curved-rail-b"]["curved-rail-b"])
-
---log("wooden-platform DEBUG: listing place_result entities")
---
---local count = 0
---for name, _ in pairs(place_result_entities) do
---	log("  place_result -> " .. name)
---	count = count + 1
---end
-
---log("wooden-platform DEBUG: total place_result entities = " .. count)
---log("wooden-platform: applied via single function (custom/default + whitelist + place_result filter)")
+for proto_type, prototypes in pairs(data.raw) do
+	if string.find(proto_type, "rail") then
+		for _, rails in pairs(prototypes) do
+			add_layer(rails)
+		end
+	end
+end

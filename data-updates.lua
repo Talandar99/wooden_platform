@@ -27,3 +27,12 @@ if mods["pelagos"] then
 	item.default_import_location = "pelagos"
 	data.raw["recipe"]["wooden-platform"].enabled = false
 end
+
+-- arig compatibility
+if mods["planetaris-arig"] then
+	local item = data.raw.item["wooden-platform"]
+	if item and item.place_as_tile and data.raw.tile["arig-sand"] then
+		table.insert(item.place_as_tile.tile_condition, "arig-sand")
+		table.insert(item.place_as_tile.tile_condition, "arig-deep-sand")
+	end
+end
