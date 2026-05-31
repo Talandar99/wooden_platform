@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.2
-Date: 2026-05-10
+Version: 0.3.3
+Date: 2026-05-31
   Bugfixes:
     - slightly curved rails can no longer be placed on wooden platform
     - fixes arig compat. You should now be able to use wooden platforms there
