@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.4
+Version: 0.3.5
 Date: 2026-05-31
   Changes:
     - with lignumis installed wood is replaced with lumber in wooden platform recipes
