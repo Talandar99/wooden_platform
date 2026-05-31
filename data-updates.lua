@@ -39,7 +39,7 @@ if mods["lignumis"] then
 			},
 			enabled = false,
 			ingredients = {
-				{ type = "item", name = "lumber", amount = 30 },
+				{ type = "item", name = "lumber", amount = 40 },
 			},
 			results = { { type = "item", name = "wooden-platform", amount = 1 } },
 			auto_recycle = false,
