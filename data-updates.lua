@@ -32,23 +32,38 @@ if mods["lignumis"] then
 	data:extend({
 		{
 			type = "recipe",
-			name = "lignumis-wooden-platform",
+			name = "wooden-platform",
 			icons = {
 				{ icon = "__wooden_platform__/graphics/wooden-platform-icon.png", icon_size = 64 },
 				{ icon = data.raw["item"]["lumber"].icon, icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 			},
 			enabled = false,
 			ingredients = {
-				{ type = "item", name = "lumber", amount = 40 },
+				{ type = "item", name = "lumber", amount = 50 },
 			},
 			results = { { type = "item", name = "wooden-platform", amount = 1 } },
-			auto_recycle = false,
 		},
 	})
-	table.insert(
-		data.raw["technology"]["wood-science-pack"].effects,
-		{ type = "unlock-recipe", recipe = "lignumis-wooden-platform" }
-	)
+	if mods["pelagos"] then
+		data:extend({
+			{
+				type = "recipe",
+				name = "pelagos-wooden-platform",
+				icons = {
+					{ icon = "__wooden_platform__/graphics/wooden-platform-icon.png", icon_size = 64 },
+					{ icon = "__pelagos__/graphics/sealant.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+				},
+				enabled = false,
+				ingredients = {
+					{ type = "item", name = "lumber", amount = 10 },
+					{ type = "item", name = "coconut-sealant", amount = 3 },
+					{ type = "item", name = "coconut-husk", amount = 15 },
+				},
+				results = { { type = "item", name = "wooden-platform", amount = 1 } },
+				auto_recycle = false,
+			},
+		})
+	end
 end
 
 -- arig compatibility

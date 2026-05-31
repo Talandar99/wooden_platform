@@ -2,6 +2,11 @@
 Version: 0.3.4
 Date: 2026-05-31
   Changes:
+    - with lignumis installed wood is replaced with lumber in wooden platform recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2026-05-31
+  Changes:
     - with lignumis installed you can now make wooden platform in lumber mill
     - with lignumis installed you can now make wooden platform out of lumber
   Balancing:
