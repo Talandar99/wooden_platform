@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2026-05-31
+  Changes:
+    - with lignumis installed you can now make wooden platform in lumber mill
+    - with lignumis installed you can now make wooden platform out of lumber
+  Balancing:
+    - changed cost of wooden platform recipe for pelagos. It should feel cheaper now 
+      (15 wood -> 10 wood, 5 sealant -> 3 sealant, 10 coconut husks -> 15 cocontu husks)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 2026-05-31
   Bugfixes:
