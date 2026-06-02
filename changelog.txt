@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 2026-06-02
+  Bugfixes:
+    - latest wooden platform mask changes should no longer resulting with elevated rails 
+      coliding with buildings
+---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 2026-05-31
   Changes:

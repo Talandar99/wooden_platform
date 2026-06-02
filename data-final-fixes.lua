@@ -16,7 +16,7 @@ if t then
 		t.collision_mask = { layers = t.collision_mask }
 	end
 	t.collision_mask.layers["wooden-platform"] = true
-	--t.collision_mask.layers["rail"] = true
+	t.collision_mask.layers["rail"] = true
 end
 
 local MASK = "wooden-platform"
@@ -154,27 +154,5 @@ end
 for proto_type, set in pairs(data.raw) do
 	for _, prototype in pairs(set) do
 		apply_platform_mask(proto_type, prototype)
-	end
-end
-
-local function add_layer(proto)
-	if not proto then
-		return
-	end
-
-	if not proto.collision_mask then
-		proto.collision_mask = { layers = {} }
-	elseif not proto.collision_mask.layers then
-		proto.collision_mask = { layers = proto.collision_mask }
-	end
-
-	proto.collision_mask.layers["wooden-platform"] = true
-end
-
-for proto_type, prototypes in pairs(data.raw) do
-	if string.find(proto_type, "rail") then
-		for _, rails in pairs(prototypes) do
-			add_layer(rails)
-		end
 	end
 end
